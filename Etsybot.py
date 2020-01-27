@@ -1,5 +1,5 @@
 from selenium import webdriver
-from username import username, password
+# from username import username, password
 from selenium.webdriver.common.keys import Keys
 import time
 #from  openpyxl import *
@@ -8,10 +8,10 @@ import xlwt
 from datetime import datetime
 
 class Etsy:
-    def __init__(self, username , password):
+    def __init__(self):
         self.browser = webdriver.Chrome()
-        self.username = username
-        self.password = password
+        # self.username = username
+        # self.password = password
         self.ck =  Workbook()
         self.k1 =self.ck.add_sheet('sayfa1')
         a = 'Tarih'
@@ -63,7 +63,7 @@ class Etsy:
 
 
 
-etsy =Etsy(username, password)
+etsy =Etsy()
 etsy.signIn()
 
 etsy.n=0
